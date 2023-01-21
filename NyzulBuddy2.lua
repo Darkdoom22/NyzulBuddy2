@@ -173,7 +173,7 @@ function NyzulBuddy:Update2AMessage(packet)
     local messageId = bit.band(packet["Message ID"], 0x3FFF)
     if(messageId)then
         if(messageId == 7301)then
-            self["ObjectiveStr"] = "Objective: Get going!"
+            self["ObjectiveStr"] = "Get going!"
         elseif(messageId == 7311)then
             self["TimeStr"] = string.format("%s", packet["Param 1"])
             self["RunStartTime"] = os.clock()
@@ -181,7 +181,7 @@ function NyzulBuddy:Update2AMessage(packet)
             NyzulBuddy:RequestRunes()
             self["FloorStr"] = string.format("%s", packet["Param 1"])
         elseif(messageId == 7312)then
-            self["ObjectiveStr"] = "Objective: git gud:("
+            self["ObjectiveStr"] = "git gud:("
         end
     end
 end
